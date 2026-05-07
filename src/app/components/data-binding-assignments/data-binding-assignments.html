@@ -1,0 +1,11 @@
+<h3 class="text-center">Let's work on databinding Assignments</h3>
+
+<div class="border border-3 rounded-3 p-3 mt-2">
+  <div>1. Have a paragraph and a toggle button; on clicking the button, control the visibility (Show / Hide) of the
+    paragraph.</div>
+
+  <h1 [hidden]="flag">Hellooooooooo, Good Morning!!!</h1>
+  <button class="btn btn-primary" (click)="toggleFlag()">
+    {{ flag ? 'SHOW' : 'HIDE'}}
+  </button>
+</div>
