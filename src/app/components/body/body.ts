@@ -1,3 +1,4 @@
+import { DirectivesDemo } from './../directives-demo/directives-demo';
 import { Component } from '@angular/core';
 import { DataBinding } from '../data-binding/data-binding';
 import { DataBindingAssignments } from '../data-binding-assignments/data-binding-assignments';
@@ -6,7 +7,8 @@ import { DataBindingAssignments } from '../data-binding-assignments/data-binding
   selector: 'app-body',
   imports: [
     // DataBinding
-    DataBindingAssignments
+    // DataBindingAssignments
+    DirectivesDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
