@@ -104,3 +104,17 @@
   <div>input:{{num}}</div>
   <div>output:{{num | ordinal}}</div>
 </div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Custom Directive Alpha Numeric</div>
+  <input appAlphaNumeric />
+</div>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <div>Pure & ImPure Pipe:</div>
+  @for (ele of numArr | mySort; track $index) {
+    <b>{{ele}} &nbsp;</b>
+  }
+  <input type="number" #newNum class="mx-1">
+  <button (click)="numArr.push(+newNum.value)">Add</button>
+</div>

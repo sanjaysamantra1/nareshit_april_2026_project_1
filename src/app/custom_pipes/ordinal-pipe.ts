@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class OrdinalPipe implements PipeTransform {
   transform(num: number) {
+    console.log('OrdinalPipe called...')
     let result = '';
 
     let rem = num % 10;

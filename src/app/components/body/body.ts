@@ -5,6 +5,7 @@ import { DataBindingAssignments } from '../data-binding-assignments/data-binding
 import { UserList } from '../user-list/user-list';
 import { ProductList } from '../product-list/product-list';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
+import { ParentDemo } from '../parent-demo/parent-demo';
 
 @Component({
   selector: 'app-body',
@@ -14,7 +15,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
     // DirectivesDemo
     // UserList
     // ProductList,
-    PipesDemo,
+    // PipesDemo,
+    ParentDemo
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
