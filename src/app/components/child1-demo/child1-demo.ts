@@ -4,6 +4,7 @@ import {
   Component,
   ElementRef,
   SimpleChanges,
+  ViewChild,
 } from '@angular/core';
 
 @Component({
@@ -20,6 +21,8 @@ export class Child1Demo {
   numArr: any;
   courseName: string;
 
+  @ViewChild('myBox1') myBox1: any;
+
   async fetchUserData() {
     let response = await fetch('https://jsonplaceholder.typicode.com/users');
     let userDate = await response.json();
@@ -33,17 +36,22 @@ export class Child1Demo {
     // Dependency Injection
     console.log('child constructor');
     this.courseName = 'Angular';
+    console.log(this.myBox1);
+    // this.myBox1.nativeElement.focus();
+    // this.myBox1.nativeElement.style.backgroundColor = 'lightgreen';
   }
-  ngOnInit() {
-    console.log('child ngOnInit');
-    this.fetchUserData();
-  }
-  ngOnChanges(myChanges: SimpleChanges) {
-    console.log('child ngOnChanges');
-    console.log(myChanges);
-  }
-  ngDoCheck() {
-    console.log('child ngDoCheck');
+  // ngOnInit() {
+  //   console.log('child ngOnInit');
+  //   this.fetchUserData();
+  // }
+  // ngOnChanges(myChanges: SimpleChanges) {
+  //   console.log('child ngOnChanges');
+  //   console.log(myChanges);
+  // }
+  // ngDoCheck() {
+  //   console.log('child ngDoCheck');
+  // }
+  refresh() {
     this.cdr.markForCheck();
   }
   // ngAfterContentInit() {
@@ -52,9 +60,12 @@ export class Child1Demo {
   // ngAfterContentChecked() {
   //   console.log('child ngAfterContentChecked');
   // }
-  // ngAfterViewInit() {
-  //   console.log('child ngAfterViewInit');
-  // }
+  ngAfterViewInit() {
+    console.log('child ngAfterViewInit');
+    console.log(this.myBox1);
+    this.myBox1.nativeElement.focus();
+    this.myBox1.nativeElement.style.backgroundColor = 'lightgreen';
+  }
   // ngAfterViewChecked() {
   //   console.log('child ngAfterViewChecked');
   // }
